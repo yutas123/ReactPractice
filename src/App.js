@@ -17,8 +17,20 @@ const App = () => {
       <div className="mt-4">
         <Square />
       </div>
+      {/* ここで ParentComponent を使用 */}
+      <ParentComponent />
     </div>
   );
 };
+
+// 親コンポーネント
+function ParentComponent() {
+  return <ChildComponent name="React" />;
+}
+
+// 子コンポーネント
+function ChildComponent(props) {
+  return <div>Hello, {props.name}</div>;
+}
 
 export default App;
