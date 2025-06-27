@@ -1,6 +1,7 @@
 import React from 'react';
 import Greeting from './components/Greeting';
 import Counter from './components/Counter';
+import Square from './components/Square';
 
 // 親コンポーネント
 const App = () => {
@@ -12,6 +13,9 @@ const App = () => {
       />
       <div className="mt-4">
         <Counter />
+      </div>
+      <div className="mt-4">
+        <Square />
       </div>
     </div>
   );
