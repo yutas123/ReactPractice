@@ -10,4 +10,8 @@ const Button: React.FC<ButtonProps> = (props) => {
 
 const names: Array<string> = ['Alice', 'Bob'];
 
+function identity<T>(value: T): T {
+    return value;
+}
+
 export default Button;
