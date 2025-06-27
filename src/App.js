@@ -2,6 +2,7 @@ import React from 'react';
 import Greeting from './components/Greeting';
 import Counter from './components/Counter';
 import Square from './components/Square';
+import Button from './components/Button';
 
 // 親コンポーネント
 const App = () => {
@@ -17,11 +18,19 @@ const App = () => {
       <div className="mt-4">
         <Square />
       </div>
+      <div className="mt-4">
+        <Button label="クリックしてください" />
+        <Button label="送信" />
+        <Button label="キャンセル" />
+      </div>
       {/* ここで ParentComponent を使用 */}
       <ParentComponent />
     </div>
   );
 };
+
+
+
 
 // 親コンポーネント
 function ParentComponent() {
