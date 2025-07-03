@@ -36,7 +36,7 @@ const App = () => {
         poge="ぽげぽげ"
       />
       <Profile />
-      <Profile textColor="purple" />
+      <Profile textColor={123} />
     </div>
   );
 };
