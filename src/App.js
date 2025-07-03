@@ -3,6 +3,7 @@ import Greeting from './components/Greeting';
 import Counter from './components/Counter';
 import Square from './components/Square';
 import Button from './components/Button';
+import NameList from './components/NameList';
 
 // 親コンポーネント
 const App = () => {
@@ -22,6 +23,9 @@ const App = () => {
         <Button label="クリックしてください" />
         <Button label="送信" />
         <Button label="キャンセル" />
+      </div>
+      <div className="mt-4">
+        <NameList />
       </div>
       {/* ここで ParentComponent を使用 */}
       <ParentComponent />
