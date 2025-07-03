@@ -1,5 +1,5 @@
 interface ProfileProps {
-  textColor?: string;
+  textColor?: 'red' | 'blue' | 'green' | 'black';
   user?: {
     name: string;
     imageUrl: string;
