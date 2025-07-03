@@ -7,6 +7,7 @@ import NameList from './components/NameList';
 import MOGButton from './components/MogButton';
 import Profile from './components/Profile';
 import {ShoppissssddngList} from './components/List';
+import Arare from './components/CountButton';
 
 // 親コンポーネント
 const App = () => {
@@ -39,6 +40,8 @@ const App = () => {
       <Profile />
       <Profile textColor="red" />
       <ShoppissssddngList />
+      <Arare />
+      <Arare />
     </div>
   );
 };
