@@ -4,7 +4,8 @@ import Counter from './components/Counter';
 import Square from './components/Square';
 import Button from './components/Button.tsx';
 import NameList from './components/NameList';
-import MOGButton from './components/button.js';
+import MOGButton from './components/Button.js';
+import Profile from './components/Profile';
 
 // 親コンポーネント
 const App = () => {
@@ -30,7 +31,12 @@ const App = () => {
       </div>
       {/* ここで ParentComponent を使用 */}
       <ParentComponent />
-      <MOGButton />
+      <MOGButton
+        piyo="もぐもぐ"
+        poge="ぽげぽげ"
+      />
+      <Profile />
+      <Profile textColor="red" />
     </div>
   );
 };
