@@ -1,65 +1,10 @@
-import React, { useState } from 'react';
-import Greeting from './components/Greeting';
-import Counter from './components/Counter';
-import Square from './components/Square';
-import Button from './components/Button';
-import NameList from './components/NameList';
-import MOGButton from './components/MogButton';
-import Profile from './components/Profile';
-import {ShoppissssddngList} from './components/List';
-import Arare from './components/CountButton';
+import TicTacToe from './components/TicTacToe';
 
 // 親コンポーネント
-const App = () => {
-  const [sharedCount, setSharedCount] = useState(0);
-  
-  const handleIncrement = () => {
-    setSharedCount(sharedCount + 1);
-  };
-
-  return (
-    <div className="p-8">
-      <Greeting 
-        name="田中"
-        message="今日も一日頑張りましょう！"
-      />
-      <div className="mt-4">
-        <Counter />
-      </div>
-      <div className="mt-4">
-        <Square />
-      </div>
-      <div className="mt-4">
-        <Button label="クリックしてください" />
-        <Button label="送信" />
-        <Button label="キャンセル" />
-      </div>
-      <div className="mt-4">
-        <NameList />
-      </div>
-      {/* ここで ParentComponent を使用 */}
-      <ParentComponent />
-      <MOGButton
-        piyo="もぐもぐ"
-        hoge="ぽげぽげ"
-      />
-      <Profile />
-      <Profile textColor="red" />
-      <ShoppissssddngList />
-      <Arare count={sharedCount} onIncrement={handleIncrement} />
-      <Arare count={sharedCount} onIncrement={handleIncrement} />
-    </div>
+const App = () => {  
+  return (  
+    <TicTacToe />
   );
 };
-
-// 親コンポーネント
-function ParentComponent() {
-  return <ChildComponent name="React" />;
-}
-
-// 子コンポーネント
-function ChildComponent(props: {name: string }) {
-  return <div>Hello, {props.name}</div>;
-}
 
 export default App;
