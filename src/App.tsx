@@ -4,7 +4,7 @@ import Counter from './components/Counter';
 import Square from './components/Square';
 import Button from './components/Button';
 import NameList from './components/NameList';
-import MOGButton from './components/Button.js';
+import MOGButton from './components/MogButton';
 import Profile from './components/Profile';
 
 // 親コンポーネント
@@ -33,16 +33,13 @@ const App = () => {
       <ParentComponent />
       <MOGButton
         piyo="もぐもぐ"
-        poge="ぽげぽげ"
+        hoge="ぽげぽげ"
       />
       <Profile />
-      <Profile textColor={123} />
+      <Profile textColor="red" />
     </div>
   );
 };
-
-
-
 
 // 親コンポーネント
 function ParentComponent() {
@@ -50,7 +47,7 @@ function ParentComponent() {
 }
 
 // 子コンポーネント
-function ChildComponent(props) {
+function ChildComponent(props: {name: string }) {
   return <div>Hello, {props.name}</div>;
 }
 
