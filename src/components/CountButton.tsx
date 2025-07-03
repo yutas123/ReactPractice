@@ -1,13 +1,11 @@
-import { useState } from 'react';
+interface CountButtonProps {
+  count: number;
+  onIncrement: () => void;
+}
 
-export default function CountButton() {
-  const [count, setCount] = useState(0);
-  function handleClick() {
-    setCount(count + 1);
-  }
-
+export default function CountButton({ count, onIncrement }: CountButtonProps) {
   return (
-    <button onClick={handleClick}>
+    <button onClick={onIncrement}>
       Clicked {count} times
     </button>
   );

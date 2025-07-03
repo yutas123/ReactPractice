@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Greeting from './components/Greeting';
 import Counter from './components/Counter';
 import Square from './components/Square';
@@ -11,6 +11,12 @@ import Arare from './components/CountButton';
 
 // 親コンポーネント
 const App = () => {
+  const [sharedCount, setSharedCount] = useState(0);
+  
+  const handleIncrement = () => {
+    setSharedCount(sharedCount + 1);
+  };
+
   return (
     <div className="p-8">
       <Greeting 
@@ -40,8 +46,8 @@ const App = () => {
       <Profile />
       <Profile textColor="red" />
       <ShoppissssddngList />
-      <Arare />
-      <Arare />
+      <Arare count={sharedCount} onIncrement={handleIncrement} />
+      <Arare count={sharedCount} onIncrement={handleIncrement} />
     </div>
   );
 };
