@@ -2,8 +2,9 @@ import React from 'react';
 import Greeting from './components/Greeting';
 import Counter from './components/Counter';
 import Square from './components/Square';
-import Button from './components/Button';
+import Button from './components/Button.tsx';
 import NameList from './components/NameList';
+import MOGButton from './components/button.js';
 
 // 親コンポーネント
 const App = () => {
@@ -29,7 +30,7 @@ const App = () => {
       </div>
       {/* ここで ParentComponent を使用 */}
       <ParentComponent />
-      <MyButton />
+      <MOGButton />
     </div>
   );
 };
