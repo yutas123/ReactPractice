@@ -6,6 +6,7 @@ import Button from './components/Button';
 import NameList from './components/NameList';
 import MOGButton from './components/MogButton';
 import Profile from './components/Profile';
+import {ShoppissssddngList} from './components/List';
 
 // 親コンポーネント
 const App = () => {
@@ -37,6 +38,7 @@ const App = () => {
       />
       <Profile />
       <Profile textColor="red" />
+      <ShoppissssddngList />
     </div>
   );
 };
