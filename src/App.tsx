@@ -2,7 +2,7 @@ import React from 'react';
 import Greeting from './components/Greeting';
 import Counter from './components/Counter';
 import Square from './components/Square';
-import Button from './components/Button.tsx';
+import Button from './components/Button';
 import NameList from './components/NameList';
 import MOGButton from './components/Button.js';
 import Profile from './components/Profile';
