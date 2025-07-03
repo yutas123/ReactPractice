@@ -29,6 +29,7 @@ const App = () => {
       </div>
       {/* ここで ParentComponent を使用 */}
       <ParentComponent />
+      <MyButton />
     </div>
   );
 };
