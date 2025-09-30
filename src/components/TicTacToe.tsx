@@ -3,14 +3,34 @@ import { useState } from 'react';
 export default function TicTacToe() {
   function Input (text) {
     return(
-      <div>ああ</div>
+      <input type="text" />
+    );
+  }
+
+  function InputList (props) {
+    return(
+      <div>
+        <h3>Input List</h3>
+        <div>{props.text}</div>        
+      </div>
+    );
+  }
+
+  function add (props) {
+    console.log(props);
+    return(
+      <div>
+        <h3>Input List</h3>
+        <div>{props}</div>        
+      </div>
     );
   }
 
   return (
     <div className="App">
       <Input text="test"/>
-      <div>追加</div>
+      <button onClick={ () => add("aaa")}>追加</button>
+      <InputList/>
     </div>
   );
 }
