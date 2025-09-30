@@ -1,7 +1,7 @@
 import { use, useState } from 'react';
 
 export default function TicTacToe() {
-  const [text, setText] = useState(null);
+  const [hoge, setText] = useState(null);
 
   function Input (text) {
     return(
@@ -26,7 +26,7 @@ export default function TicTacToe() {
     <div className="App">
       <Input text="test"/>
       <button onClick={ () => add("aaa")}>追加</button>
-      <InputList text={text}/>
+      <InputList text={hoge}/>
     </div>
   );
 }
