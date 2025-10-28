@@ -1,11 +1,16 @@
 import { use, useState } from 'react';
 
 export default function TicTacToe() {
-  const [hoge, setText] = useState(null);
+  const [hoge, setText] = useState("");
+  const [inputValue, setinputValue] = useState("");
 
-  function Input (text) {
+  function Input (props) {
     return(
-      <input type="text" />
+      <input 
+        type="text"
+        value={props.value}
+        onChange={props.onChange}
+      />
     );
   }
 
@@ -13,19 +18,23 @@ export default function TicTacToe() {
     return(
       <div>
         <h3>Input List</h3>
-        <div>{props.text}</div>        
+        <div>{props.text}</div>
       </div>
     );
   }
 
   function add (props) {
     setText(props);
+    setinputValue(props);
   }
 
   return (
     <div className="App">
-      <Input text="test"/>
-      <button onClick={ () => add("aaa")}>追加</button>
+      <Input
+        value={inputValue}
+        onChange={(e) => setinputValue(e.target.value)}
+      />
+      <button onClick={ () => add(inputValue)}>追加</button>
       <InputList text={hoge}/>
     </div>
   );
